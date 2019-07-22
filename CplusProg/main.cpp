@@ -8,7 +8,20 @@ struct Address
 
 struct Person
 {
+    string nombre;
+    int edad;
+    Address direccion;
 
+    Person(const string &name, int age)
+    : nombre(name),
+      edad(age)
+    {
+    }
+
+    explicit Person(const Address &dir)
+    : direccion(dir)
+    {
+    }
 };
 
 using namespace std;
